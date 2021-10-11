@@ -10,4 +10,16 @@ router.get('/', (req, res) => {
     });
 });
 
+
+router.get('/new', (req, res) => {
+    res.render('manufacturers/new.ejs');
+});
+
+
+router.post('/', (req, res) => {
+    Manufacturer.create(req.body, (err, createdManufacturer) =>{
+        res.redirect('/manufacturers');
+    });
+});
+
 module.exports = router

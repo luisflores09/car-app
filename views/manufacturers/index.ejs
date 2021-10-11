@@ -18,7 +18,9 @@
         <h2>List of Manufacturers</h2>
         <ul>
             <% for(let i = 0; i < manufacturers.length; i++) { %>
-                <a href="/manufacturers/<%= manufacturers[i]._id %>"><%= manufacturers[i].name %></a>
+                <li>
+                    <a href="/manufacturers/<%= manufacturers[i]._id %>"><%= manufacturers[i].name %></a>
+                </li>
             <% } %>
         </ul>
     </main>
