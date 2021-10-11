@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car-App Cars Index Page</title>
+</head>
+<body>
+    <header>
+        <h1>Car-App.io Cars Index Page</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/cars/new">Create New Car</a>
+        </nav>
+    </header>
+    <main>
+        <h2>List of Cars</h2>
+        <ul>
+            <% for(let i = 0; i < cars.length; i++){ %>
+                <li>
+                    <a href="/cars/<%=cars[i]._id%>"><%= cars[i].name %></a>
+                </li>
+            <% } %>
+        </ul>
+    </main>
+</body>
+</html>
