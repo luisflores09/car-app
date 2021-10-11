@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 const morgan = require('morgan');
 const expressSession = require('express-session');
 const indexController = require('./controllers/index');
+const userController = require('./controllers/users');
 
 require('dotenv').config();
 const PORT = process.env.PORT;
@@ -36,6 +37,8 @@ app.use(express.urlencoded({
 
 
 app.use('/', indexController);
+
+app.use('/', userController);
 
 
 app.listen(PORT, () => console.log(`Server is listening on port: ${PORT}`));
