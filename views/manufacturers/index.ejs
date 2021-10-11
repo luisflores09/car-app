@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Car-App.io Manufacturers Index Page</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/manufacturers/new">Create new Manufacturer</a>
+        </nav>
+    </header>
+    <main>
+        <h2>List of Manufacturers</h2>
+        <ul>
+            <% for(let i = 0; i < manufacturers.length; i++) { %>
+                <a href="/manufacturers/<%= manufacturers[i]._id %>"><%= manufacturers[i].name %></a>
+            <% } %>
+        </ul>
+    </main>
+</body>
+</html>

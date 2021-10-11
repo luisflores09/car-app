@@ -21,9 +21,19 @@ router.get('/new', (req, res) => {
     });
 });
 
+
 router.post('/', (req, res) => {
     Car.create(req.body, (err, createdCar) => {
         res.redirect('/cars');
+    });
+});
+
+
+router.get('/:id', (req, res) => {
+    Car.findById(req.params.id).populate('manufacturer').exec((err, foundCar) => {
+        res.render('cars/show.ejs', {
+            car: foundCar
+        });
     });
 });
 

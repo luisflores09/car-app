@@ -5,7 +5,7 @@ const User = require('../models/user');
 
 
 router.get('/login', (req, res) => {
-    res.render('login.ejs', { error: ''});
+    res.render('auth/login.ejs', { error: ''});
 });
 
 
@@ -25,7 +25,7 @@ router.post('/login', (req, res) => {
 
 
 router.get('/signup', (req, res) => {
-    res.render('signup.ejs');
+    res.render('auth/signup.ejs');
 });
 
 

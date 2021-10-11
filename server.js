@@ -6,6 +6,7 @@ const expressSession = require('express-session');
 const indexController = require('./controllers/index');
 const userController = require('./controllers/users');
 const carsController = require('./controllers/cars');
+const manufacturersController = require('./controllers/manufacturers')
 
 require('dotenv').config();
 const PORT = process.env.PORT;
@@ -42,6 +43,8 @@ app.use('/', indexController);
 app.use('/', userController);
 
 app.use('/cars', carsController);
+
+app.use('/manufacturers', manufacturersController);
 
 
 app.listen(PORT, () => console.log(`Server is listening on port: ${PORT}`));
