@@ -37,4 +37,26 @@ router.post('/signup', (req, res) => {
     });
 });
 
+
+router.get('/logout', (req, res) => {
+    req.session.destroy(() =>{
+        res.redirect('/');
+    });
+});
+
+
+router.get('/dashboard', isAuthenticated, (req, res) => {
+    User.findById(req.session.user, (err, user) => {
+        res.render('dashboard.ejs', {user});
+    });
+});
+
+
+function isAuthenticated(req, res, next) {
+    if(!req.session.user){
+        return res.redirect('/login')
+    }
+    next();
+}
+
 module.exports = router;
