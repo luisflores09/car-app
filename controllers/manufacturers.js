@@ -16,6 +16,12 @@ router.get('/new', (req, res) => {
 });
 
 
+router.delete('/:id', (req, res) => {
+    Manufacturer.findByIdAndRemove(req.params.id, (err, data) => {
+        res.redirect('/manufacturers');
+    });
+});
+
 router.post('/', (req, res) => {
     Manufacturer.create(req.body, (err, createdManufacturer) =>{
         res.redirect('/manufacturers');
