@@ -9,6 +9,8 @@ const carsController = require('./controllers/cars');
 const manufacturersController = require('./controllers/manufacturers');
 const carSeed = require('./models/carseed');
 const Car = require('./models/car');
+const Manufacturer = require('./models/manufacturer');
+const manufacturerSeed = require('./models/manufacturerseed');
 
 require('dotenv').config();
 const PORT = process.env.PORT;
@@ -43,6 +45,13 @@ app.get('/cars/seed', (req, res) => {
     Car.deleteMany({}, (error, allCars) => {})
     Car.create(carSeed, (error, data) => {
         res.redirect('/cars')
+    });
+});
+
+app.get('/manufacturers/seed', (req, res) => {
+    Manufacturer.deleteMany({}, (error, allManufacturers) => {})
+    Manufacturer.create(manufacturerSeed, (error, data) => {
+        res.redirect('/manufacturers')
     });
 });
 
