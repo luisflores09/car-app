@@ -4,7 +4,7 @@ const Car = require('../models/car');
 const Manufacturer = require('../models/manufacturer');
 
 
-router.get('/', (req, res) =>{
+router.get('/', (req, res) => {
     Car.find({}, (err, foundCars) => {
         res.render('cars/index.ejs', {
             cars: foundCars
@@ -30,9 +30,12 @@ router.post('/', (req, res) => {
 
 
 router.get('/:id', (req, res) => {
-    Car.findById(req.params.id).populate('manufacturer').exec((err, foundCar) => {
-        res.render('cars/show.ejs', {
-            car: foundCar
+    Car.findById(req.params.id, (err, foundCar) => {
+        Manufacturer.findById(foundCar.manufacturer, (err, foundManufacturer) => {
+            res.render('cars/show.ejs', {
+                car: foundCar,
+                manufacturer: foundManufacturer
+            });
         });
     });
 });

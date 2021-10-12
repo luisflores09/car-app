@@ -6,7 +6,9 @@ const expressSession = require('express-session');
 const indexController = require('./controllers/index');
 const userController = require('./controllers/users');
 const carsController = require('./controllers/cars');
-const manufacturersController = require('./controllers/manufacturers')
+const manufacturersController = require('./controllers/manufacturers');
+const carSeed = require('./models/carseed');
+const Car = require('./models/car');
 
 require('dotenv').config();
 const PORT = process.env.PORT;
@@ -37,6 +39,12 @@ app.use(express.urlencoded({
     extended: false
 }));
 
+app.get('/cars/seed', (req, res) => {
+    Car.deleteMany({}, (error, allCars) => {})
+    Car.create(carSeed, (error, data) => {
+        res.redirect('/cars')
+    });
+});
 
 app.use('/', indexController);
 

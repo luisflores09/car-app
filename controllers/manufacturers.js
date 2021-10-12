@@ -22,4 +22,13 @@ router.post('/', (req, res) => {
     });
 });
 
+
+router.get('/:id', (req, res) =>{
+    Manufacturer.findById(req.params.id, (err, foundManufacturer) =>{
+        res.render('manufacturers/show.ejs', {
+            manufacturer: foundManufacturer
+        });
+    });
+});
+
 module.exports = router

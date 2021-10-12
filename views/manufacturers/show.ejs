@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car-App.io <%= manufacturer.name %></title>
+</head>
+<body>
+    <header>
+        <h1><%= manufacturer.name %> info page</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/manufacturers">Manufacturers</a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Manufacturer Details:</h2>
+            <ul>
+                <li>Name: <%= manufacturer.name %></li>
+                <li>Year Founded: <%= manufacturer.yearFounded %></li>
+                <li>Country: <%= manufacturer.country %></li>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>

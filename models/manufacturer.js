@@ -2,7 +2,9 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const manufacturerSchema = new Schema({
-    name: String
+    name: String,
+    yearFounded: Number,
+    country: String,
 }, {
     timestamps: true
 });
