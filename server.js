@@ -3,6 +3,7 @@ const app = express();
 const mongoose = require('mongoose');
 const morgan = require('morgan');
 const expressSession = require('express-session');
+const methodOverride = require('method-override')
 const indexController = require('./controllers/index');
 const userController = require('./controllers/users');
 const carsController = require('./controllers/cars');
@@ -28,6 +29,8 @@ db.on('error', (err) => console.log(err.message + ' is MONGODB not running?'));
 db.on('connected', () => console.log('MONGO DB Connected', MONGODB_URL));
 db.on('disconnected', () => console.log('MONGODB Disconnected'));
 
+
+app.use(methodOverride('_method'));
 
 app.use(expressSession({
     secret: process.env.SECRET,

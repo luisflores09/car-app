@@ -7,7 +7,7 @@ const Manufacturer = require('../models/manufacturer');
 router.get('/', (req, res) => {
     Car.find({}, (err, foundCars) => {
         res.render('cars/index.ejs', {
-            cars: foundCars
+            cars: foundCars,
         });
     });
 });
@@ -21,6 +21,12 @@ router.get('/new', (req, res) => {
     });
 });
 
+
+router.delete('/:id', (req, res) => {
+    Car.findByIdAndRemove(req.params.id, (err, data) => {
+        res.redirect('/cars')
+    });
+});
 
 router.post('/', (req, res) => {
     Car.create(req.body, (err, createdCar) => {
