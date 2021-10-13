@@ -28,12 +28,37 @@ router.delete('/:id', (req, res) => {
     });
 });
 
+
+router.put('/:id', (req, res) => {
+    Car.findByIdAndUpdate(
+        req.params.id,
+        req.body, {
+            new: true,
+        },
+        (error, updatedCar) => {
+            res.redirect(`/cars/${req.params.id}`)
+        }
+    )
+});
+
+
 router.post('/', (req, res) => {
     Car.create(req.body, (err, createdCar) => {
         res.redirect('/cars');
     });
 });
 
+
+router.get('/:id/edit', (req, res) => {
+    Car.findById(req.params.id, (error, foundCar) => {
+        Manufacturer.find({}, (err, foundManufacturers) => {
+            res.render('cars/edit.ejs', {
+                car: foundCar,
+                manufacturers: foundManufacturers
+            });
+        });
+    });
+});
 
 router.get('/:id', (req, res) => {
     Car.findById(req.params.id, (err, foundCar) => {

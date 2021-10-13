@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head.ejs'); %>
+    <title>Car-App.io Create New Car</title>
+</head>
+
+<body>
+    <header>
+        <%- include('../partials/header.ejs'); %>
+    </header>
+    <main>
+        <h1>Edit Car</h1>
+        <form action="/cars/<%=car._id%>?_method=PUT" method="POST">
+            <input type="text" name="name" value="<%=car.name%>">
+            <label>
+                <select name="manufacturer">
+                    <% manufacturers.forEach(manufacturer => { %>
+                    <option value="<%= manufacturer._id%>">
+                        <%= manufacturer.name %>
+                    </option>
+                    <% }); %>
+                </select>
+            </label><br>
+            <input type="number" name="year" value="<%=car.year%>"><br>
+            <input type="text" name="color" value="<%=car.color%>"><br>
+            <input type="number" name="horsepower" value="<%=car.horsepower%>"><br>
+            <input type="text" name="transmissionType" value="<%=car.transmissionType%>"><br>
+            <input type="text" name="image" value="<%=car.image%>"><br>
+            <input type="submit" value="Submit Changes">
+        </form>
+    </main>
+    <footer>
+        <%- include('../partials/footer.ejs'); %>
+    </footer>
+</body>
+
+</html>
