@@ -1,26 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include('../partials/head.ejs'); %>
     <title>Car-App.io <%= car.name %></title>
 </head>
+
 <body>
     <header>
-        <nav>
-            <a href="/">Home</a>
-            <a href="/cars">Cars</a>
-        </nav><br>
-        <h1><%= car.name %></h1>
+        <%- include('../partials/header.ejs'); %>
     </header>
     <main>
+        <h1><%= car.name %></h1>
         <li>Manufacturer: <%= car.manufacturer %></li><br>
         <li>Year: <%= car.year %></li><br>
         <li>Color: <%= car.color %></li><br>
         <li>Horse Power: <%= car.horsepower %></li><br>
         <li>Transmission Type: <%= car.transmissionType %></li><br>
-
+        <img src="<%= car.image %>" alt=""><br>
     </main>
+    <footer>
+        <%- include('../partials/footer.ejs'); %>
+    </footer>
 </body>
+
 </html>

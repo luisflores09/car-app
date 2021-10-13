@@ -5,6 +5,7 @@ const manufacturerSchema = new Schema({
     name: String,
     yearFounded: Number,
     country: String,
+    image: String,
 }, {
     timestamps: true
 });

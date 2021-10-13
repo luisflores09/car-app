@@ -1,37 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include('../partials/head.ejs'); %>
     <title>Car-App.io Create New Car</title>
 </head>
+
 <body>
     <header>
-        <h1>Create New Car</h1>
-        <nav>
-            <a href="/">Home</a>
-            <a href="/cars">Cars</a>
-        </nav>
+        <%- include('../partials/header.ejs'); %>
     </header>
     <main>
+        <h1>Create New Car</h1>
         <form action="/cars" method="POST">
-        <input type="text" name="name" placeholder="Name">
-        <label>
-            <select name="manufacturer">
-                <% manufacturers.forEach(manufacturer => { %>
+            <input type="text" name="name" placeholder="Name">
+            <label>
+                <select name="manufacturer">
+                    <% manufacturers.forEach(manufacturer => { %>
                     <option value="<%= manufacturer._id%>">
                         <%= manufacturer.name %>
                     </option>
-                <% }); %>
-            </select>
-        </label><br>
-        <input type="number" name="year" placeholder="Year"><br>
-        <input type="text" name="color" placeholder="Color"><br>
-        <input type="number" name="horsepower" placeholder="Horse Power"><br>
-        <input type="text" name="transmissionType" placeholder="Transmission Type"><br>
-        <input type="submit" value="Create Car">
+                    <% }); %>
+                </select>
+            </label><br>
+            <input type="number" name="year" placeholder="Year"><br>
+            <input type="text" name="color" placeholder="Color"><br>
+            <input type="number" name="horsepower" placeholder="Horse Power"><br>
+            <input type="text" name="transmissionType" placeholder="Transmission Type"><br>
+            <input type="submit" value="Create Car">
         </form>
     </main>
+    <footer>
+        <%- include('../partials/footer.ejs'); %>
+    </footer>
 </body>
+
 </html>

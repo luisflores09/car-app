@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include('./partials/head.ejs'); %>
     <title>Car-App <%= user.username %>'s Dashboard</title>
 </head>
 <body>
     <header>
-        <h1>Welcome <%= user.username %></h1>
-        <nav>
-            <a href="/cars">Cars</a>
-            <a href="/manufacturers">Manufacturers</a>
-            <a href="/logout">Logout</a>
-        </nav>
+        <%- include('./partials/header.ejs'); %>
     </header>
+    <main>
+        <h1>Welcome <%= user.username %></h1>
+    </main>
+    <footer>
+        <%- include('./partials/footer.ejs'); %>
+    </footer>
 </body>
 </html>

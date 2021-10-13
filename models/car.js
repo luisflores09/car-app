@@ -8,6 +8,7 @@ const carSchema = new Schema({
     color: String,
     horsepower: Number,
     transmissionType: String,
+    image: String,
 });
 
 const Car = mongoose.model('Car', carSchema);

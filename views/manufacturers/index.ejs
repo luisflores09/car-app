@@ -1,31 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include('../partials/head.ejs'); %>
     <title>Car-App Manufacturers Index Page</title>
 </head>
+
 <body>
     <header>
-        <h1>Car-App.io Manufacturers Index Page</h1>
-        <nav>
-            <a href="/">Home</a>
-            <a href="/manufacturers/new">Create new Manufacturer</a>
-        </nav>
+        <%- include('../partials/header.ejs'); %>
     </header>
     <main>
-        <h2>List of Manufacturers</h2>
+        <h1>List of Manufacturers</h1>
+        <nav>
+            <a href="/manufacturers/new">Create new Manufacturer</a>
+        </nav>
         <ul>
             <% for(let i = 0; i < manufacturers.length; i++) { %>
-                <li>
-                    <a href="/manufacturers/<%= manufacturers[i]._id %>"><%= manufacturers[i].name %></a>
-                    <form action="/manufacturers/<%=manufacturers[i]._id%>?_method=DELETE" method="POST">
-                        <input type="submit" value="Delete">
-                    </form>
-                </li>
+            <li>
+                <a href="/manufacturers/<%= manufacturers[i]._id %>"><%= manufacturers[i].name %></a>
+                <form action="/manufacturers/<%=manufacturers[i]._id%>?_method=DELETE" method="POST">
+                    <input type="submit" value="Delete">
+                </form>
+            </li>
+            <img src="<%= manufacturers[i].image%>" alt="">
             <% } %>
         </ul>
     </main>
+    <footer>
+        <%- include('../partials/footer.ejs'); %>
+    </footer>
 </body>
+
 </html>

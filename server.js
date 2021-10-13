@@ -30,6 +30,8 @@ db.on('connected', () => console.log('MONGO DB Connected', MONGODB_URL));
 db.on('disconnected', () => console.log('MONGODB Disconnected'));
 
 
+app.use(express.static('public'));
+
 app.use(methodOverride('_method'));
 
 app.use(expressSession({

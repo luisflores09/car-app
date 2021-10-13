@@ -1,26 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include('../partials/head.ejs'); %>
     <title>Car-App.io Create New Manufacturer</title>
 </head>
+
 <body>
     <header>
-        <h1>Create New Manufacturer</h1>
-        <nav>
-            <a href="/">Home</a>
-            <a href="/manufacturers">Manufacturers</a>
-        </nav><br>
+        <%- include('../partials/header.ejs'); %>
     </header>
+    <h1>Create New Manufacturer</h1>
     <main>
         <form action="/manufacturers" method="POST">
-        <input type="text" name="name" placeholder="Name"><br>
-        <input type="Number" name="yearFounded" placeholder="Year Founded"><br>
-        <input type="text" name="country" placeholder="Country"><br>
-        <input type="submit" value="Create Manufacturer">
+            <input type="text" name="name" placeholder="Name"><br>
+            <input type="Number" name="yearFounded" placeholder="Year Founded"><br>
+            <input type="text" name="country" placeholder="Country"><br>
+            <input type="submit" value="Create Manufacturer">
         </form>
     </main>
+    <footer>
+        <%- include('../partials/footer.ejs'); %>
+    </footer>
 </body>
+
 </html>

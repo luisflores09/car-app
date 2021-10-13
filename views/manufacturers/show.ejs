@@ -1,20 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include('../partials/head.ejs'); %>
     <title>Car-App.io <%= manufacturer.name %></title>
 </head>
+
 <body>
     <header>
-        <nav>
-            <a href="/">Home</a>
-            <a href="/manufacturers">Manufacturers</a>
-        </nav>
-        <h1><%= manufacturer.name %> info page</h1>
+        <%- include('../partials/header.ejs'); %>
     </header>
     <main>
+        <h1><%= manufacturer.name %> info page</h1>
         <section>
             <h2>Manufacturer Details:</h2>
             <ul>
@@ -22,7 +19,12 @@
                 <li>Year Founded: <%= manufacturer.yearFounded %></li>
                 <li>Country: <%= manufacturer.country %></li>
             </ul>
+            <img src="<%= manufacturer.image%>" alt="">
         </section>
     </main>
+    <footer>
+        <%- include('../partials/footer.ejs'); %>
+    </footer>
 </body>
+
 </html>
