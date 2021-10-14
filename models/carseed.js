@@ -42,7 +42,7 @@ module.exports = [
         color: 'Black',
         horsepower: 600,
         transmissionType: 'Automatic',
-        image: 'https://lh3.googleusercontent.com/proxy/M_Uw69Qe6GD0bcvzLx7Jx9eHO3nux6mt-L1ZndiFpKR9wb-xfq1I5Zm5enA6IDe8_MZlextIWF9B6w0T1xpDVLfleVBZByB_9uygePm7K92BxnRSz9gTRQLaFDGQl3X4dX4BWztDZJoppT0nm2wrdisNxQ'
+        image: 'https://static.cargurus.com/images/forsale/2020/08/24/21/27/2016_nissan_gt-r-pic-7846733054981296624-1024x768.jpeg'
     },
 
 
