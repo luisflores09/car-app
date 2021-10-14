@@ -29,4 +29,10 @@ module.exports = [
         country: 'Japan',
         image: 'https://www.dntghana.com/wp-content/uploads/2020/05/nissan_logo-1.jpg'
     },
+    {
+        name: 'BMW',
+        yearFounded: 1916,
+        country: 'Germany',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/BMW.svg/2048px-BMW.svg.png'
+    },
 ]

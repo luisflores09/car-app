@@ -13,18 +13,26 @@
     <main>
         <h1>List of Cars</h1>
         <nav>
-            <a href="/cars/new">Create New Car</a>
+            <a href="/cars/new">
+                <button class="main-btn">Create</button></a>
         </nav>
         <ul>
             <% for(let i = 0; i < cars.length; i++){ %>
             <li>
-                <a href="/cars/<%=cars[i]._id%>"><%= cars[i].name %></a><br>
-                <button>
-                    <a href="/cars/<%=cars[i]._id%>/edit">Edit</a>
-                </button>
-                <form action="/cars/<%= cars[i]._id %>?_method=DELETE" method="POST">
-                    <input type="submit" value="DELETE">
-                </form>
+                <h2><%= cars[i].name %></h2>
+                <span>
+                    <a href="/cars/<%=cars[i]._id%>">
+                        <button class="main-btn">Show</button></a>
+                </span>
+                <span>
+                    <a href="/cars/<%=cars[i]._id%>/edit">
+                        <button class="main-btn">Edit</button></a>
+                </span>
+                <span>
+                    <form action="/cars/<%= cars[i]._id %>?_method=DELETE" method="POST">
+                        <button class="delete-btn" type="submit">Delete</button>
+                    </form>
+                </span>
             </li>
             <img src="<%= cars[i].image %>">
             <br><br>

@@ -44,6 +44,22 @@ module.exports = [
         transmissionType: 'Automatic',
         image: 'https://static.cargurus.com/images/forsale/2020/08/24/21/27/2016_nissan_gt-r-pic-7846733054981296624-1024x768.jpeg'
     },
-
-
+    {
+        name: 'Mustang Mach E GT',
+        manufacturer: 'Ford',
+        year: 2022,
+        color: 'Yellow',
+        horsepower: 459,
+        transmissionType: 'Automatic',
+        image: 'https://cdn.motor1.com/images/mgl/RP4Am/s1/mustang-mach-e-gt-performance-edition-three-quarters.jpg'
+    },
+    {
+        name: 'M5',
+        manufacturer: 'BMW',
+        year: 2022,
+        color: 'Blue',
+        horsepower: 627,
+        transmissionType: 'Automatic',
+        image: 'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/2021-bmw-m5-competition-579-edit-1625696490.jpg'
+    },
 ]
