@@ -1,20 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <%- include('../partials/head.ejs'); %>
     <title>Car-App.io Signup Page</title>
 </head>
+
 <body>
-    <h1>Car-App.io Signup Page</h1>
+    <header>
+        <h1>Welcome to Car-App.io</h1>
+        <nav class="header-links">
+            <span>
+                <a href="/">
+                    <button class="header-btn">Home</button>
+                </a>
+            </span>
+        </nav>
+    </header>
+    <main>
+    <h2>Signup</h2>
     <p>Please Enter a Username and Password to join</p>
     <form action="/signup" method="POST">
-    <label>Username
-        <input type="text" name="username">
-    </label><br>
-    <label>Password
-        <input type="password" name="password">
-    </label><br>
-    <input type="submit" value="Sign Up">
+        <label>Username
+            <input type="text" name="username">
+        </label><br>
+        <label>Password
+            <input type="password" name="password">
+        </label><br>
+        <input type="submit" value="Sign Up">
     </form>
+</main>
+<footer>
+    <%- include('../partials/footer.ejs'); %>
+</footer>
 </body>
+
 </html>

@@ -5,7 +5,18 @@
     <title>Car-App.io Login Page</title>
 </head>
 <body>
-   <h1>Car-App.io Login Page</h1>
+    <header>
+        <h1>Welcome to Car-App.io</h1>
+        <nav class="header-links">
+            <span>
+                <a href="/">
+                    <button class="header-btn">Home</button>
+                </a>
+            </span>
+        </nav>
+    </header>
+    <main>
+   <h2> Login</h2>
    <% if(error)  { %>
     <p style="color: red;"><%= error %></p>
    <% } %>
@@ -19,5 +30,9 @@
     </label><br>
     <input type="submit" value="Login">
 </form>
+</main>
+<footer>
+    <%- include('../partials/footer.ejs'); %>
+</footer>
 </body>
 </html>

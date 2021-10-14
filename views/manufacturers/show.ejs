@@ -11,16 +11,12 @@
         <%- include('../partials/header.ejs'); %>
     </header>
     <main>
-        <h1><%= manufacturer.name %> info page</h1>
-        <section>
-            <h2>Manufacturer Details:</h2>
-            <ul>
-                <li>Name: <%= manufacturer.name %></li>
-                <li>Year Founded: <%= manufacturer.yearFounded %></li>
-                <li>Country: <%= manufacturer.country %></li>
-            </ul>
-            <img src="<%= manufacturer.image%>" alt="">
-        </section>
+        <h1><%= manufacturer.name %> Details</h1>
+        <li>Name: <%= manufacturer.name %></li>
+        <li>Year Founded: <%= manufacturer.yearFounded %></li>
+        <li>Country: <%= manufacturer.country %></li><br>
+        <img src="<%= manufacturer.image%>" alt="">
+
     </main>
     <footer>
         <%- include('../partials/footer.ejs'); %>
