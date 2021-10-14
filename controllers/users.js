@@ -19,7 +19,7 @@ router.post('/login', (req, res) => {
             return res.render('auth/login.ejs', {error: 'Invalid Credentials'});
         }
         req.session.user = foundUser._id;
-        res.redirect('/dashboard');
+        res.redirect('/');
     });
 });
 
@@ -45,9 +45,9 @@ router.get('/logout', (req, res) => {
 });
 
 
-router.get('/dashboard', isAuthenticated, (req, res) => {
+router.get('/', isAuthenticated, (req, res) => {
     User.findById(req.session.user, (err, user) => {
-        res.render('dashboard.ejs', {user});
+        res.render('home.ejs', {user});
     });
 });
 

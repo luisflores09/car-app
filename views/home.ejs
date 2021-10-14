@@ -10,16 +10,40 @@
 <body>
     <header>
         <h1>Welcome to Car-App.io</h1>
-        <nav>
+        <nav class="header-links">
             <% if(user) { %> 
-                <a href="/cars">Cars</a>
-                <a href="/manufacturers">Manufacturers</a>
-                <a href="/logout">Logout</a>
+                <span>
+                    <a href="/cars">
+                    <button class="header-btn">Cars</button>
+                    </a>
+                </span>
+                <span>
+                    <a href="/manufacturers">
+                    <button class="header-btn">Manufacturers</button>
+                    </a>
+                </span>
+                <span>
+                    <a href="/logout">
+                    <button class="header-btn">Logout</button>
+                    </a>
+                </span>
             <% } else { %>
-                <a href="/login">Login</a>
-                <a href="/signup">Signup</a>
+                <span>
+                    <a href="/login">
+                    <button class="header-btn">Login</button>
+                    </a>
+                </span>
+                <span>
+                    <a href="/signup">
+                    <button class="header-btn">Signup</button>
+                    </a>
+                </span>
             <% } %>
         </nav>
     </header>
+    <main>
+        <h2>Welcome to Car-App.io, this app will alow you to create, edit and delete cars as well as their manufacturers.</h2>
+        <h2>Press either the Cars button or the Manufacturers button to continue</h2>
+    </main>
 </body>
 </html>
