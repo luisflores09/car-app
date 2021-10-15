@@ -3,21 +3,6 @@ Car-App is a full CRUD application that will allow you to create, read, update a
 
 Authorization has been implemented so a user will need to sign up and login to have access to Car-App.
 
-## ***Screenshots***
-
-### Login Page
-![Login Page](/public/images/loginpage.jpg)
-
-### Homepage
-![Homepage](/public/images/homepage.jpg)
-
-### Cars Page
-![Cars Page](/public/images/carspage.jpg)
-
-### Show Page
-![Cars Page](/public/images/showpage.jpg)
-
-
 ## ***Technologies Used***
 
 -*HTML/EJS*
@@ -33,6 +18,23 @@ Authorization has been implemented so a user will need to sign up and login to h
 -*Mongoose*
 
 -*MongoDB*
+
+
+## ***Screenshots***
+
+### Login Page
+![Login Page](/public/images/loginpage.jpg)
+
+### Homepage
+![Homepage](/public/images/homepage.jpg)
+
+### Cars Page
+![Cars Page](/public/images/carspage.jpg)
+
+### Show Page
+![Cars Page](/public/images/showpage.jpg)
+
+
 
 ## ***Getting Started***
 
