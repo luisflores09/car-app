@@ -10,8 +10,8 @@
     <header>
         <%- include('../partials/header.ejs'); %>
     </header>
-    <h1>Edit Manufacturer</h1>
     <main>
+        <h1>Edit Manufacturer</h1>
         <form action="/manufacturers/<%=manufacturer._id%>?_method=PUT" method="POST">
             Name<input type="text" name="name" value="<%=manufacturer.name%>"><br>
             Year Founded<input type="Number" name="yearFounded" value="<%=manufacturer.yearFounded%>"><br>

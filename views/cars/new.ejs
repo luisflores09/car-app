@@ -13,8 +13,8 @@
     <main>
         <h1>Create New Car</h1>
         <form action="/cars" method="POST">
-            <input type="text" name="name" placeholder="Name">
-            <label>
+            <input type="text" name="name" placeholder="Name"><br>
+            Manufacturer<label>
                 <select name="manufacturer">
                     <% manufacturers.forEach(manufacturer => { %>
                     <option value="<%= manufacturer.name%>">
