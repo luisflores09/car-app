@@ -38,7 +38,7 @@ Authorization has been implemented so a user will need to sign up and login to h
 
 ## ***Getting Started***
 
-Press this link to continue to the app [Car-App](https://git.heroku.com/car-app99.git)
+Press this link to continue to the app [Car-App](https://car-app99.herokuapp.com)
 
 You will need to signup by creating a user and a password and then login to get access to the app.
 
