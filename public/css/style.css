@@ -103,16 +103,12 @@ main {
 h1 {
     font-size: 60px;
     font-family: sans-serif;
-    color: rgb(255, 0, 0);   
-    border-color: black;
-    border-width: 2px;
+    color: rgb(110, 0, 0);   
 }
 
 h2 {
     font-size: 45px;
     font-family: sans-serif;
     color: white;
-    border-color: black;
-    border-width: 2px;
 }
 
